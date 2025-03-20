@@ -1,0 +1,113 @@
+/* --nyanza: #d8f3dcff;
+--celadon: #b7e4c7ff;
+--celadon-2: #95d5b2ff;
+--mint: #74c69dff;
+--mint-2: #52b788ff;
+--sea-green: #40916cff;
+--dartmouth-green: #2d6a4fff;
+--brunswick-green: #1b4332ff;
+--dark-green: #081c15ff; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: JetBrains mono;
+  }
+  
+  .pageHeader {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    background-color: #40916cff;
+    color: white;
+    padding: 1.5vh 195vh 1.5vh 1.5vh;
+    margin: 1.5vh;
+    border-radius: 2vh;
+  }
+  .headerBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    z-index: 9;
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(1vh);
+  }
+  
+  
+  .container {
+    margin-top: 11vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    font-family: JetBrains mono;
+  }
+  
+  .blogPreview {
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    width: 40vh;
+  }
+  
+  .blogBody{
+      display: flex;
+  }
+  
+  .blogContent {
+    width: 100%; 
+    height: 15vh; 
+    overflow: hidden; 
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis; 
+    white-space: normal;
+  }
+  
+  .blogWrite{
+    justify-content: center;
+    font-family: JetBrains mono;
+    position: fixed;
+    z-index: 1;
+    margin: 13vh 2vh 0vh 160vh;
+    padding: 1vh;
+    background-color: #74c69dff;
+    border-radius: 1vh;
+  }
+  
+  .name,.title,.content{
+    padding: 1vh;
+    margin: 1vh;
+    border-radius: 1vh;
+    outline: none;
+    border-style: none;
+    width: 53vh;
+    font-size: 2.5vh;
+  }
+  
+  .content{
+    height: 63vh;
+    resize: none;
+  }
+  
+  img{
+    border-radius: 1vh;
+  }
+  
+  .readMore,.submitBlog{
+    width: 100%;
+    border-radius: 1vh;
+    border-style: none;
+    background-color: #1b4332ff;
+    color: white;
+    padding: 1vh;
+    margin: 0.3vh 0 0 0 ;
+    cursor: pointer;
+  }
