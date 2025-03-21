@@ -22,7 +22,7 @@
     position: fixed;
     z-index: 10;
     display: flex;
-    background-color: #40916cff;
+    background-color: #1b4332ff;
     color: white;
     padding: 1.5vh 195vh 1.5vh 1.5vh;
     margin: 1.5vh;
@@ -105,7 +105,7 @@
     width: 100%;
     border-radius: 1vh;
     border-style: none;
-    background-color: #1b4332ff;
+    background-color: #2d6a4fff;
     color: white;
     padding: 1vh;
     margin: 0.3vh 0 0 0 ;
