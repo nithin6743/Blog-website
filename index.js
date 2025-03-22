@@ -5,7 +5,15 @@ form.addEventListener('submit', async function (eve) {
   const author = document.querySelector('.name').value;
   const title = document.querySelector('.title').value;
   const content = document.querySelector('.content').value;
-  const data = { author, title, content };
+  const date = new Date().toLocaleDateString();
+
+  const wordCount = content.split(/\s+/).filter(word => word.length > 0).length;
+
+  if (wordCount < 20) {
+      alert("Your blog content must have at least 20 words.");
+      return;
+  }
+  const data = { author,date, title, content };
   const response = await fetch('http://localhost:3000/add', {
     method: 'POST',
     headers: {
