@@ -18,71 +18,108 @@
     <div class="blogBody">
       <div class="container">
         <div class="blogPreview">
-          <img src="./images/1.webp">
+          <img src="./images/1.webp" />
           <div class="titleAndContent">
             <h3 class="blogTitle">Lorem ipsum</h3>
             <p class="blogContent">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam suscipit enim sint ex at, harum nemo? Reprehenderit ad vel tempore, doloremque eligendi deserunt nihil harum officia praesentium! Praesentium, eligendi. Aperiam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam suscipit enim sint ex at, harum nemo? Reprehenderit ad vel tempore, doloremque eligendi deserunt nihil harum officia praesentium! Praesentium, eligendi. Aperiam.
-
-            </p><br>
-            <p class="authorName">by Name#@%$^#%</p>
-            <p class="blogDate">22/03/25</p>
-          </div>
-          <button class="readMore">Read More</button>
-        </div>
-        <div class="blogPreview">
-          <img src="./images/1.webp">
-          <div class="titleAndContent">
-            <h3 class="blogTitle">Lorem ipsum</h3>
-            <p class="blogContent">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam suscipit enim sint ex at, harum nemo? Reprehenderit ad vel tempore, doloremque eligendi deserunt nihil harum officia praesentium! Praesentium, eligendi. Aperiam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam suscipit enim sint ex at, harum nemo? Reprehenderit ad vel tempore, doloremque eligendi deserunt nihil harum officia praesentium! Praesentium, eligendi. Aperiam.
-
-            </p><br>
-            <p class="authorName">by Name#@%$^#%</p>
-            <p class="blogDate">22/03/25</p>
-          </div>
-          <button class="readMore">Read More</button>
-        </div>
-        <div class="blogPreview">
-          <img src="./images/1.webp">
-          <div class="titleAndContent">
-            <h3 class="blogTitle">Lorem ipsum</h3>
-            <p class="blogContent">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam suscipit enim sint ex at, harum nemo? Reprehenderit ad vel tempore, doloremque eligendi deserunt nihil harum officia praesentium! Praesentium, eligendi. Aperiam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam suscipit enim sint ex at, harum nemo? Reprehenderit ad vel tempore, doloremque eligendi deserunt nihil harum officia praesentium! Praesentium, eligendi. Aperiam.
-
-            </p><br>
-            <p class="authorName">by Name#@%$^#%</p>
-            <p class="blogDate">22/03/25</p>
-          </div>
-          <button class="readMore">Read More</button>
-        </div>
-        <div class="blogPreview">
-          <img src="./images/1.webp">
-          <div class="titleAndContent">
-            <h3 class="blogTitle">Lorem ipsum</h3>
-            <p class="blogContent">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam suscipit enim sint ex at, harum nemo? Reprehenderit ad vel tempore, doloremque eligendi deserunt nihil harum officia praesentium! Praesentium, eligendi. Aperiam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam suscipit enim sint ex at, harum nemo? Reprehenderit ad vel tempore, doloremque eligendi deserunt nihil harum officia praesentium! Praesentium, eligendi. Aperiam.
-
-            </p><br>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+              suscipit enim sint ex at, harum nemo? Reprehenderit ad vel
+              tempore, doloremque eligendi deserunt nihil harum officia
+              praesentium! Praesentium, eligendi. Aperiam. Lorem ipsum dolor sit
+              amet, consectetur adipisicing elit. Quisquam suscipit enim sint ex
+              at, harum nemo? Reprehenderit ad vel tempore, doloremque eligendi
+              deserunt nihil harum officia praesentium! Praesentium, eligendi.
+              Aperiam.
+            </p>
+            <br />
             <p class="authorName">by Name#@%$^#%</p>
             <p class="blogDate">22/03/25</p>
           </div>
           <button class="readMore">Read More</button>
         </div>
       </div>
-        
-  
+
       <div class="blogWrite">
-        <form class="writeBlog">
-          <input type="text" class="title" placeholder="Enter Blog Title" required>
-          <textarea class="content" placeholder="Enter Your Blog content (atleast 10 words)" required></textarea>
-          <input class="name" placeholder="Enter Your Name" required>
+        <form class="writeBlog" enctype="multipart/form-data">
+          <input
+            type="text"
+            class="title"
+            placeholder="Enter Blog Title"
+            required
+          />
+          <div
+            class="content"
+            contenteditable="true"
+            placeholder="Enter Your Blog content"
+            required
+          ></div>
+          <div class="formatting-toolbar">
+            <button
+              type="button"
+              class="format-btn"
+              data-format="bold"
+              title="Bold"
+            >
+              B
+            </button>
+            <button
+              type="button"
+              class="format-btn"
+              data-format="italic"
+              title="Italic"
+            >
+              I
+            </button>
+            <button
+              type="button"
+              class="format-btn"
+              data-format="underline"
+              title="Underline"
+            >
+              U
+            </button>
+            <button
+              type="button"
+              class="format-btn"
+              data-format="bullet"
+              title="Bullet Point"
+            >
+              •
+            </button>
+            <button
+              type="button"
+              class="format-btn"
+              data-format="number"
+              title="Numbered List">
+              1.
+            </button>
+          </div>
+          <div class="uploadImg">
+            <p>Upload your blog image(optional)</p>
+            <input
+              type="file"
+              class="uploadedFile"
+              accept="image/*"
+              name="image"
+            />
+          </div>
+          <input class="name" placeholder="Enter Your Name" required />
           <button class="submitBlog">SUBMIT</button>
         </form>
+      </div>
+    </div>
+
+    <!-- Popup for full blog content -->
+    <div class="popup-overlay">
+      <div class="popup-content">
+        <button class="close-btn">&times;</button>
+        <img src="" alt="Blog Image" class="popup-image" />
+        <h2 class="popup-title"></h2>
+        <div class="blog-meta">
+          <span class="popup-author"></span>
+          <span class="popup-date"></span>
+        </div>
+        <p class="popup-content-text"></p>
       </div>
     </div>
 
